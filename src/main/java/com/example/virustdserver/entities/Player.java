@@ -3,7 +3,9 @@ package com.example.virustdserver.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -25,5 +27,7 @@ public class Player {
     private List<Level> levelsDone;
     private List<Achievement> achievements;
     private String settings;
+    @CreatedDate
+    private LocalDateTime createdAt;
 
 }

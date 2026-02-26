@@ -1,4 +1,4 @@
 package com.example.virustdserver.entities;
 
-public class Session {
+public class GameResults {
 }

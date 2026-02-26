@@ -5,5 +5,4 @@ public enum LevelComplexity {
     MEDIUM,
     HARD
     ;
-
 }
