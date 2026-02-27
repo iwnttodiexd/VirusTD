@@ -1,5 +1,8 @@
-package com.example.virustdserver.entities;
+package com.example.virustdserver.entities.player;
 
+import com.example.virustdserver.entities.Achievement;
+import com.example.virustdserver.entities.Level;
+import com.example.virustdserver.entities.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -18,8 +21,8 @@ import java.util.List;
 public class Player {
 
     @Id
-    @GeneratedValue()
-    private Long id;
+    @OneToOne
+    private User user;
     @Size(min = 4, max = 22)
     @Column(unique = true, name = "nickname")
     private String nickname;

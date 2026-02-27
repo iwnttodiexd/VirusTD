@@ -1,4 +1,4 @@
-package com.example.virustdserver.entities.complexity;
+package com.example.virustdserver.complexity;
 
 public enum LevelComplexity {
     EASY,
