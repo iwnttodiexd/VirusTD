@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Table(name = "game_results")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -28,6 +29,7 @@ public class GameResults {
     private Level level;
     private Integer enemiesKilled;
     private Integer towersBuilt;
+    @Enumerated(EnumType.STRING)
     private Result result;
     @CreationTimestamp
     private LocalDateTime playedAt;

@@ -6,8 +6,10 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
+@Table(name = "tower_upgrades")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,7 +18,7 @@ import java.time.LocalDateTime;
 public class TowerUpgrade {
 
     @Id
-    private Integer id;
+    private UUID id;
     @Setter
     @Getter
     @ManyToOne(fetch = FetchType.LAZY)

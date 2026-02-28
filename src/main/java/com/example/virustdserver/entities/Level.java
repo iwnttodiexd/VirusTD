@@ -23,5 +23,6 @@ public class Level {
     @Column(name = "title", unique = true)
     private String title;
     private String description;
+    @Enumerated(EnumType.STRING)
     private LevelComplexity complexity;
 }

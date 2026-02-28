@@ -1,23 +1,25 @@
 package com.example.virustdserver.entities;
 
 import com.example.virustdserver.complexity.EnemyComplexity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.UUID;
 
 @Entity
+@Table(name = "enemies")
 public class Enemy {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+    @Column(name = "name", unique = true)
     private String name;
     private Integer totalHealth;
     private Float damage;
-    private Integer reward;
     private Float speed;
+    @Enumerated(EnumType.STRING)
     private EnemyComplexity complexity;
+    private Integer reward;
     private String description;
 
 }

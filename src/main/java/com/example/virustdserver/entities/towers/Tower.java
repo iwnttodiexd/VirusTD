@@ -1,23 +1,23 @@
 package com.example.virustdserver.entities.towers;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
+@Table(name = "towers")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Tower {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private UUID id;
     private String name;
     private Integer baseDamage;
     private Float baseAttackSpeed;

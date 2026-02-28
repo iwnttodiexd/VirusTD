@@ -2,12 +2,17 @@ spring:
   application:
     name: VirusTDServer
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5433/virusttd
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
     show-sql: true
     database: PostgreSQL
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true

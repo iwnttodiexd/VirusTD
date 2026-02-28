@@ -1,13 +1,17 @@
 package com.example.virustdserver.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.UUID;
 
 @Entity
+@Table(name = "achievements")
 public class Achievement {
 
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+    @Column(unique = true, nullable = false)
     private String name;
     private String description;
 

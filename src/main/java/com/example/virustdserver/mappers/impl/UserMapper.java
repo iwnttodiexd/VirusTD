@@ -9,7 +9,7 @@ public class UserMapper implements MapperInterface<User, UserDto> {
 
     @Override
     public User mapTo(UserDto dto) {
-        return ;
+        return null;
     }
 
     @Override
