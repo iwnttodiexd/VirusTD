@@ -1,15 +1,12 @@
 package com.example.virustdserver.entities.player;
 
-import com.example.virustdserver.entities.Achievement;
-import com.example.virustdserver.entities.Level;
-import com.example.virustdserver.entities.User;
+import com.example.virustdserver.entities.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -39,4 +36,16 @@ public class Player {
     @CreatedDate
     private LocalDateTime createdAt;
 
+    public Player(User user,
+                  String nickname,
+                  Long enemyKilled,
+                  String settings,
+                  LocalDateTime createdAt
+    ) {
+        this.user = user;
+        this.nickname = nickname;
+        this.enemyKilled = enemyKilled;
+        this.settings = settings;
+        this.createdAt = createdAt;
+    }
 }

@@ -5,7 +5,10 @@ create table users (
        password varchar(255) not null,
        token varchar(255),
        is_locked boolean,
-       enabled boolean
+       enabled boolean,
+       created_date timestamp not null default current_timestamp,
+       last_modified_date timestamp
+
 );
 
 create table players (
