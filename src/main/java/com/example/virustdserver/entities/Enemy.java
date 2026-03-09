@@ -15,10 +15,7 @@ public class Enemy {
     @Column(name = "name", unique = true)
     private String name;
     private Integer totalHealth;
-    private Float damage;
     private Float speed;
-    @Enumerated(EnumType.STRING)
-    private EnemyComplexity complexity;
     private Integer reward;
     private String description;
 

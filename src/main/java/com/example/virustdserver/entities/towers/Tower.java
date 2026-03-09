@@ -19,8 +19,9 @@ public class Tower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
     private String name;
-    private Integer baseDamage;
-    private Float baseAttackSpeed;
+    @OneToOne
+    @JoinColumn(name = "tower_types_id")
+    private TowerType towerType;
     private Float range;
     private Integer baseCost;
     @OneToMany(mappedBy = "tower")

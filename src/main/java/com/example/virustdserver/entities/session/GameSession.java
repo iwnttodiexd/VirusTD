@@ -1,7 +1,7 @@
-package com.example.virustdserver.entities;
+package com.example.virustdserver.entities.session;
 
+import com.example.virustdserver.entities.Level;
 import com.example.virustdserver.entities.player.Player;
-import com.example.virustdserver.entities.session.Status;
 import jakarta.persistence.*;
 import lombok.*;
 

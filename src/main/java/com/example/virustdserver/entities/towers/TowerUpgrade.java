@@ -24,7 +24,12 @@ public class TowerUpgrade {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tower_id")
     private Tower tower;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tower_abilities_id")
+    private TowerAbility towerAbility;
     private Integer damageIncreased;
+    private Float attackSpeedIncreased;
     private Integer cost;
+    private String description;
 
 }

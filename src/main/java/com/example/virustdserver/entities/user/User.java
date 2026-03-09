@@ -35,7 +35,6 @@ public class User implements UserDetails {
     @Column(nullable = false)
     @Size(min = 8)
     private String password;
-    private String token;
     private boolean accountLocked;
     private boolean enabled;
 
@@ -52,13 +51,11 @@ public class User implements UserDetails {
     public User(
             String username,
             String password,
-            String token,
             boolean isLocked,
             boolean enabled
     ) {
         this.username = username;
         this.password = password;
-        this.token = token;
         this.accountLocked = isLocked;
         this.enabled = enabled;
     }

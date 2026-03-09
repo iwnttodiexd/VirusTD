@@ -3,7 +3,6 @@ create table users (
        id uuid primary key,
        username varchar(255) unique,
        password varchar(255) not null,
-       token varchar(255),
        is_locked boolean,
        enabled boolean,
        created_date timestamp not null default current_timestamp,
