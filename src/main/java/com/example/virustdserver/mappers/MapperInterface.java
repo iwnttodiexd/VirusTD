@@ -1,9 +1,8 @@
 package com.example.virustdserver.mappers;
 
-import org.mapstruct.Mapper;
+public interface MapperInterface<T, R> {
 
-public interface MapperInterface<T, R>{
+    T mapFromDto (R dto);
 
-    T mapTo(R dto);
-    R mapFrom(T entity);
+    R mapToDto(T entity);
 }

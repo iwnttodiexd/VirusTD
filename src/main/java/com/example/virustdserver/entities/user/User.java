@@ -38,7 +38,7 @@ public class User implements UserDetails {
     private boolean accountLocked;
     private boolean enabled;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<UserRole> userRoles;
 
     @CreatedDate
@@ -47,18 +47,6 @@ public class User implements UserDetails {
     @LastModifiedDate
     @Column(insertable = false)
     private LocalDateTime lastModifiedDate;
-
-    public User(
-            String username,
-            String password,
-            boolean isLocked,
-            boolean enabled
-    ) {
-        this.username = username;
-        this.password = password;
-        this.accountLocked = isLocked;
-        this.enabled = enabled;
-    }
 
     @Override
     public boolean isAccountNonExpired() {

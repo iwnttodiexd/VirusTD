@@ -4,6 +4,7 @@ import com.example.virustdserver.entities.Level;
 import com.example.virustdserver.entities.player.Player;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -26,6 +27,7 @@ public class GameSession {
     @ManyToOne
     @JoinColumn(name = "level_id")
     private Level level;
+    @CreationTimestamp
     private LocalDateTime startedAt;
     private LocalDateTime endedAt;
     @Enumerated(EnumType.STRING)

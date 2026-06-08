@@ -35,17 +35,5 @@ public class Player {
 
     @CreatedDate
     private LocalDateTime createdAt;
-
-    public Player(User user,
-                  String nickname,
-                  Long enemyKilled,
-                  String settings,
-                  LocalDateTime createdAt
-    ) {
-        this.user = user;
-        this.nickname = nickname;
-        this.enemyKilled = enemyKilled;
-        this.settings = settings;
-        this.createdAt = createdAt;
-    }
+    
 }

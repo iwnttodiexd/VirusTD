@@ -30,9 +30,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
                                 .requestMatchers(
-                                        "/api/v1/**",
-                                        "/register",
-                                        "/login"
+                                        "/api/v1/auth/**"
                                 )
                                 .permitAll()
                                 .anyRequest()
